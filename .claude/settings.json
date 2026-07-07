@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c//**)",
+      "Read(//c/Users/**)",
+      "Bash(ssh-keygen -t rsa -b 4096 -f ~/.ssh/school -N \"\" -C \"orion@$\\(hostname\\)\")",
+      "Bash(ssh -i ~/.ssh/school -o BatchMode=yes -o ConnectTimeout=8 -o StrictHostKeyChecking=accept-new ubuntu@13.221.233.147 \"echo CONNECTED && whoami\")",
+      "Bash(ssh -i ~/.ssh/school -o BatchMode=yes ubuntu@13.221.233.147 'mkdir -p ~/.ssh && chmod 700 ~/.ssh && touch ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && grep -qxF '\\\\''ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNdtrNGtTXe5Tp1EJQop8mOSAuRGLjJ6DW4PqX4wId/Kawz35ESampIqHSOTJmbQ8UlxdJuk0gAXKk3Ncle4safGYqM/VeDK3LN5iAJxf4kcaxNtS3eVxWBE5iF3FbIjOqwxw5Lf5sRa5yXxA8HfWidhbIG5TqKL922hPgsCGABIrXRlfZYeC0FEuPWdr6smOElSVvIXthRWp9cr685KdCI+COxlj1RdVsvIo+zunmLACF9PYdjB2s96Fn0ocD3c5SGLvDOFCyvDojSAOyE70ebIElnskKsDTGwfT4P6jh9OBzTyQEIS2jOaE5RQq4IB4DsMhvbjDSQrP0MdCLgwkN'\\\\'' ~/.ssh/authorized_keys || echo '\\\\''ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNdtrNGtTXe5Tp1EJQop8mOSAuRGLjJ6DW4PqX4wId/Kawz35ESampIqHSOTJmbQ8UlxdJuk0gAXKk3Ncle4safGYqM/VeDK3LN5iAJxf4kcaxNtS3eVxWBE5iF3FbIjOqwxw5Lf5sRa5yXxA8HfWidhbIG5TqKL922hPgsCGABIrXRlfZYeC0FEuPWdr6smOElSVvIXthRWp9cr685KdCI+COxlj1RdVsvIo+zunmLACF9PYdjB2s96Fn0ocD3c5SGLvDOFCyvDojSAOyE70ebIElnskKsDTGwfT4P6jh9OBzTyQEIS2jOaE5RQq4IB4DsMhvbjDSQrP0MdCLgwkN'\\\\'' >> ~/.ssh/authorized_keys && echo DONE && cat ~/.ssh/authorized_keys')",
+      "Bash(rm -rf /tmp/tmp.WTYL2p70R7)",
+      "Bash(./1-create_ssh_key_pair)",
+      "Bash(ssh-keygen -lf school.pub)",
+      "Bash(git check-ignore *)",
+      "Bash(git config *)",
+      "Bash(git status *)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(git add *)",
+      "Bash(git fetch *)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/orionkabeza/alu-system_engineering-devops/main/ssh/school\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://api.github.com/repos/orionkabeza/alu-system_engineering-devops\")",
+      "Bash(curl -s \"https://api.github.com/repos/orionkabeza/alu-system_engineering-devops\")"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
+    ]
+  }
+}
