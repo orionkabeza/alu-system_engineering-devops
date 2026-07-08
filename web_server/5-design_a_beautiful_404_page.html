@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — Ceci n'est pas une page</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #7ec8e3 0%, #cfe9f3 55%, #f4efe6 55%, #e8dfcf 100%);
+    font-family: Georgia, "Times New Roman", serif;
+    color: #2b2b2b;
+    overflow: hidden;
+  }
+  .cloud {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50px;
+    opacity: 0.9;
+    animation: drift 60s linear infinite;
+  }
+  .cloud::before, .cloud::after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+  .c1 { width: 140px; height: 40px; top: 12%; left: -160px; }
+  .c1::before { width: 60px; height: 60px; top: -28px; left: 22px; }
+  .c1::after  { width: 44px; height: 44px; top: -18px; left: 70px; }
+  .c2 { width: 100px; height: 30px; top: 28%; left: -120px; animation-delay: -25s; animation-duration: 80s; }
+  .c2::before { width: 44px; height: 44px; top: -20px; left: 16px; }
+  .c2::after  { width: 32px; height: 32px; top: -13px; left: 52px; }
+  @keyframes drift {
+    to { transform: translateX(115vw); }
+  }
+  .frame {
+    position: relative;
+    text-align: center;
+    background: #fbf8f1;
+    border: 14px solid #4a3324;
+    box-shadow: 0 0 0 3px #c9a86a inset, 0 18px 45px rgba(0,0,0,0.30);
+    padding: 64px 72px 48px;
+    max-width: 620px;
+    margin: 24px;
+  }
+  .code {
+    font-size: 7rem;
+    letter-spacing: 0.08em;
+    color: #35526b;
+    line-height: 1;
+  }
+  .bowler {
+    font-size: 3.2rem;
+    display: block;
+    margin: 8px auto 4px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 18px;
+  }
+  p.caption {
+    margin-top: 14px;
+    font-size: 1.02rem;
+    color: #5c5346;
+    line-height: 1.55;
+  }
+  .plaque {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 8px 22px;
+    background: #b98c48;
+    color: #fff8ea;
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  }
+  a.home {
+    display: inline-block;
+    margin-top: 26px;
+    padding: 12px 34px;
+    border: 2px solid #35526b;
+    color: #35526b;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    transition: background 0.25s, color 0.25s;
+  }
+  a.home:hover { background: #35526b; color: #fbf8f1; }
+</style>
+</head>
+<body>
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+  <main class="frame">
+    <div class="code">404</div>
+    <span class="bowler">🎩</span>
+    <h1>Ceci n'est pas une page</h1>
+    <p class="caption">
+      Like Magritte's pipe, what you are looking at is only the image of a
+      page — the page itself has never existed, or drifted away with the
+      clouds.
+    </p>
+    <span class="plaque">La Trahison des URLs — 2026</span>
+    <br>
+    <a class="home" href="/">Return to reality</a>
+  </main>
+</body>
+</html>
