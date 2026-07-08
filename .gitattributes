@@ -1,5 +1,6 @@
 ssh/0-use_a_private_key text eol=lf
 ssh/1-create_ssh_key_pair text eol=lf
 ssh/2-ssh_config text eol=lf
+ssh/100-puppet_ssh_config.pp text eol=lf
 ssh/school -text
 ssh/school.pub -text
