@@ -4,4 +4,5 @@ ssh/2-ssh_config text eol=lf
 ssh/100-puppet_ssh_config.pp text eol=lf
 ssh/school -text
 web_server/* text eol=lf
+load_balancer/* text eol=lf
 ssh/school.pub -text
