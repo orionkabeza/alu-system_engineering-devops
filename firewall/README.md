@@ -10,6 +10,9 @@ default.
   22/tcp (SSH), 80/tcp (HTTP) and 443/tcp (HTTPS), sets the default policy
   to deny all other incoming traffic (outgoing traffic stays allowed), then
   enables the firewall.
+- **100-port_forwarding** — a copy of web-01's modified `/etc/ufw/before.rules`,
+  adding a NAT `PREROUTING` rule that redirects incoming 8080/tcp traffic to
+  80/tcp, plus `ufw allow 8080/tcp` so the filter table lets it through.
 
 ## Notes
 
