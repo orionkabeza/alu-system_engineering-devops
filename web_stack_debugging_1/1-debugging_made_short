@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Start Nginx directly so port 80 answers, while the init script still (truthfully) reports it as not running
+nginx
