@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Fix Nginx so it starts and listens on port 80 of all the server's active IPv4 IPs
+apt-get install -y nginx
 service nginx start

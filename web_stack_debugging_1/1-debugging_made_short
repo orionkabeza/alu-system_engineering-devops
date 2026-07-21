@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Start Nginx directly so port 80 answers, while the init script still (truthfully) reports it as not running
+# Install Nginx and start it directly so port 80 answers, while the init script still (truthfully) reports it as not running
+apt-get install -y nginx
 nginx
