@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# Fix Nginx so it starts and listens on port 80 of all the server's active IPv4 IPs
-apt-get install -y nginx
+# Nginx was configured to listen on 8080 instead of 80; fix the config and restart it
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+pkill nginx
+sleep 1
 service nginx start
