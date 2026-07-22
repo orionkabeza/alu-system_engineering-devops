@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Fix the port and disable the pid directive so init loses track, then start directly
-sed -i -e 's/8080/80/g' -e '/^pid /s/^/#/' /etc/nginx/sites-enabled/default /etc/nginx/nginx.conf
-pkill nginx
-nginx -g 'pid /tmp/nginx.pid;'
+# Fix the port, start nginx directly, then remove its pid file so init reports it as not running
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+nginx
+rm -f /run/nginx.pid
