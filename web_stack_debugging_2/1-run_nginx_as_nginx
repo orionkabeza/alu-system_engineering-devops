@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-# Configure Nginx to listen on all IPs on port 8080 and run entirely as the nginx user
-sed -i 's/^user .*/user nginx;/' /etc/nginx/nginx.conf
-sed -i 's/listen 80 default_server;/listen 8080 default_server;/' /etc/nginx/sites-enabled/default
-sed -i 's/listen \[::\]:80 default_server;/listen [::]:8080 default_server;/' /etc/nginx/sites-enabled/default
-pkill nginx
+# Stop Apache to free port 8080, make nginx.conf readable, and run Nginx as the nginx user on port 8080
+service apache2 stop
+pkill apache2
+chmod 644 /etc/nginx/nginx.conf
+sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
+sed -i 's/listen 80 default_server;/listen 8080 default_server;/' /etc/nginx/sites-available/default
+sed -i 's/listen \[::\]:80 default_server ipv6only=on;/listen [::]:8080 default_server ipv6only=on;/' /etc/nginx/sites-available/default
 sudo -u nginx nginx
